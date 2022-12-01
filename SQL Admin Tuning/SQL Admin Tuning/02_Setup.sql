@@ -38,10 +38,10 @@ MIN: 0 gilt erst wenn erreicht
 
 
 Wird die VM verändert im Sinne: mehr oder weniger Kerne, bzw RAM
-dann ollte auch im SQL Server fiolgendes korrigiert werden
+dann sollte auch im SQL Server folgendes korrigiert werden:
 
 Anzahl der tempdb Dateien (max 8)
-MAXDOP = ANzahl der Kerne (Max8)
-Max RAM (Anpassen auf das neue Niveu abzgl OS)
+MAXDOP = Anzahl der Kerne (Max8)
+Max RAM (Anpassen auf das neue Niveau abzgl OS)
 
 
