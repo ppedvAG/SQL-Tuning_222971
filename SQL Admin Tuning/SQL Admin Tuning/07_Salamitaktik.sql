@@ -162,3 +162,28 @@ select * from parttab where nummer = 5001
 
 
 
+--Nach Jahren   Datum : datetime
+
+------------2019--------------2020-------------2021---------
+
+create partition function fZahl(datetime)
+as
+RANGE LEFT FOR VALUES('31.12.2019 23:59:59.997'     ,200)
+
+
+---A bis M      N bis R     S bis Z
+create partition function fZahl(varchar(50))
+as
+RANGE LEFT FOR VALUES('MZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ','R')
+
+---------UK----UR-----USA   ------------------------r
+
+
+
+
+create partition scheme schZahl
+as
+partition fzahl all to ([PRIMARY]) --werden automatisch soviele Teile wie die Funktion hergibt
+
+
+--macht SInn
